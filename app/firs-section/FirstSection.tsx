@@ -1,13 +1,13 @@
-import React from 'react'
-import { TextTypingEffectWithTextsFadeOut } from './TextEffect';
-import Networks from './Networks';
-import { ButtonOutline } from './LaunchApp';
-import { ButtonWithIcon } from './Doc';
-
+import React from "react";
+import { TextTypingEffectWithTextsFadeOut } from "./TextEffect";
+import Networks from "./Networks";
+import { ButtonOutline } from "./LaunchApp";
+import { ButtonWithIcon } from "./Doc";
 
 const TextAnimatedGradient = () => {
   return (
-    <span className='
+    <span
+      className="
     inline-flex
     whitespace-nowrap
     animate-text-gradient
@@ -33,42 +33,40 @@ const TextAnimatedGradient = () => {
     2xl:pb-12
     font-extralight 
     md:font-light
-    '>
+    "
+    >
       Felina Privacy-Centric <br /> Multichain Bridge.
     </span>
   );
 };
 
 const FirstSection = () => {
-  return ( 
-  <section className="py-10 sm:py-20 md:py-28 lg:py-32 xl:py-36 2xl:py-40 bg-gradient-to-r from gray-00 to-gray-200 spacey-10 flex flex-col justify-end gap-3">
+  return (
+    <section className="h-[92vh] bg-gradient-to-r from gray-00 to-gray-200 spacey-10 flex flex-col justify-center gap-3">
       <div className="container mx-auto text-center ">
+        <div>
+          <TextAnimatedGradient />
+        </div>
 
-          <div >
-              <TextAnimatedGradient/>
+        <div>
+          <TextTypingEffectWithTextsFadeOut />
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center pt-5 sm:pt-10 w-full">
+          <ButtonOutline />
+          <ButtonWithIcon />
+        </div>
+
+        <div className="flex flex-col gap-4 justify-center mt-16 md:mt-20 lg:mt-24 xl:mt-32 2xl:mt-40 md:gap-8">
+          <div className="text-[#444545] font-ubuntu text-sm">
+            Supporting a multitude of networks for your{" "}
+            <span className="text-[#43d389] font-bold">Privacy</span>
           </div>
-
-          <div>
-              <TextTypingEffectWithTextsFadeOut />
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center pt-5 sm:pt-10 w-full">
-              <ButtonOutline/>
-              <ButtonWithIcon/>
-          </div>
-
-          <div className='flex flex-col gap-4 justify-center mt-16 md:mt-20 lg:mt-24 xl:mt-32 2xl:mt-40 md:gap-8'>
-            <div className='text-[#444545] font-ubuntu text-sm'>
-              Supporting a multitude of networks for your{' '}
-              <span className='text-[#43d389] font-bold'>Privacy</span>
-            </div>
-            <Networks/>
-          </div>
-
+          <Networks />
+        </div>
       </div>
-  
-  </section> );
-}
- 
+    </section>
+  );
+};
 
-export default FirstSection
+export default FirstSection;
